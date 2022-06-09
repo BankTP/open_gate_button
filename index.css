@@ -1,0 +1,118 @@
+@font-face {
+    font-family: sarabun;
+    src: url(fonts/Sarabun-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fill {
+    flex: 1;
+}
+
+body {
+    font-family: sarabun, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#app {
+    max-width: 600px;
+    width: 100%;    
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main {
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hint {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    color: #aaa;
+    padding: 20px 0;
+}
+
+#version {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+#drag_lane {
+    width: 240px;
+    height: 440px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 220px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#drag_button {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #3673b5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    border-width: 10px;
+    border-color: #4087d5;
+}
+
+@keyframes arrow {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+
+    80% {
+        opacity: 0.7;
+    }
+
+    to {
+        top: 40px;
+        opacity: 0;
+    }
+}
+
+#arrow {
+    position: relative;
+    width: 25%;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    margin-top: -45px;
+}
